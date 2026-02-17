@@ -7,8 +7,7 @@ I needed a simple tool to wake up my media center **and** wanted to replace the 
 ## Installation
 
 ```bash
-$ go get github.com/da-rod/wakeonlan/cmd/wol
-
+$ go install github.com/da-rod/wakeonlan/cmd/wol@latest
 ```
 
 ## Usage
