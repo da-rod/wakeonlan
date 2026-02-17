@@ -2,8 +2,7 @@ package main
 
 import (
 	"flag"
-	"fmt"
-	"os"
+	"log"
 
 	"github.com/da-rod/wakeonlan"
 )
@@ -13,12 +12,9 @@ func main() {
 	flag.Parse()
 	mp, err := wakeonlan.NewMagicPacket(*dst)
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 	if err = mp.Send(); err != nil {
-		fmt.Println(err)
-		os.Exit(2)
+		log.Fatal(err)
 	}
-	os.Exit(0)
 }

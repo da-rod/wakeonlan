@@ -25,7 +25,7 @@ func NewMagicPacket(macAddress string) (MagicPacket, error) {
 
 	// After that, add the MAC address * 16:
 	idx := len(hwAddr)
-	for i := 0; i < 16; i++ {
+	for range 16 {
 		copy(mp[idx:], hwAddr)
 		idx += len(hwAddr)
 	}
